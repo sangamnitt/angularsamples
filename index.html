@@ -1,0 +1,65 @@
+<!--
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Stmart</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.header { grid-area: header; }
+.menu { grid-area: menu; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'menu header'
+    'menu main'
+    'menu footer';
+  
+  background-color: #2125f3;
+  padding: 2px;
+  height:100%;
+  grid-column-gap: 3px;
+  grid-row-gap: 3px;
+  grid-template-columns: 200px auto;
+  grid-template-rows: 100px auto 50px;
+}
+
+html,body{
+  height:100%;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  /*text-align: center;*/
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="menu">Menu</div>
+  <div class="header">
+    <input type="button" onclick="alert('Hello World!')" value="Toggle Menu">
+  </div>
+  <div class="main">Main</div>  
+  <div class="footer">Footer</div>
+</div>
+
+</body>
+</html>
